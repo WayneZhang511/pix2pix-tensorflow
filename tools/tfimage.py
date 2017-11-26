@@ -22,7 +22,7 @@ downscale = create_op(
     func=tf.image.resize_images,
     images=tf.placeholder(tf.float32, [None, None, None]),
     size=tf.placeholder(tf.int32, [2]),
-    method=tf.image.ResizeMethod.AREA,
+    method=tf.image.ResizeMethod.NEAREST_NEIGHBOR,
 )
 
 upscale = create_op(
