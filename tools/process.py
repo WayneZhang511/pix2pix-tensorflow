@@ -54,7 +54,7 @@ def resize(src):
         dst = im.downscale(images=dst, size=[a.size, a.size])
     elif size < a.size:
         dst = im.upscale(images=dst, size=[a.size, a.size])
-    return dst
+    return grayscale(dst)
 
 
 def blank(src):
