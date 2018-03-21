@@ -53,6 +53,7 @@ def resize(src):
     if size > a.size:
         dst = im.downscale(images=dst, size=[a.size, a.size])
     elif size < a.size:
+        # dst = tf.image.resize_image_with_crop_or_pad(dst, a.size, a.size)
         dst = im.upscale(images=dst, size=[a.size, a.size])
     return grayscale(dst)
 
